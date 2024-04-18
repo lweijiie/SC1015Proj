@@ -72,12 +72,13 @@ We performed analysis on the visualisations and observed the following:
     - Distance
   - Features that negatively correlate to delivery time:
     - Ratings of driver
-  - Delivery peak hours: 
-    - Afternoon: 11am to 2pm
-    - Evening: 7pm to 9pm
   - Important categorical features: 
     - Multiple Delivery ~ Multiple Delivery attributed to high delivery time. This shows the concept of supply and demand between riders and delivery orders. 
-    - Road Condition ~ Traffic conditions attributed to higher delivery time.
+    - Road Condition ~ Traffic conditions attributed to higher delivery time
+  - Time-Series observations:
+    - Delivery time is significantly affectted by multiple devlieries as observed on the time-series graph. Explanation as above ^.
+    - Road conditions explanation as above ^
+    - Recommendation of improvement to customers, restaurant, and delivery riders.
 
 Models and Feature selection:
 Selection of features based on visualisation indeed improves results of linear regression. However,  this method of feature selection does not improve the results of other models. E.g. RandomForrestRegressor, XGBoost. (Explain how feature selection work for the other regressor)
