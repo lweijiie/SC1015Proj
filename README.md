@@ -4,9 +4,9 @@
 This is a mini project for SC1015 - Introduction to Data Science and Artificial Intelligence (DSAI) which focuses on food delivery time.
 
 ## Contributors
-SONG YICK QI - Data Cleaning & Preparation, Machine Learning
+SONG YICK QI - Data Cleaning & Preparation, Machine Learning, Readme, Presentation
 
-LIEW WEI JIE - Data Cleaning & Preparation, EDA, Machine Learning
+LIEW WEI JIE - Data Cleaning & Preparation, EDA, Machine Learning, Readme, Presentation
 
 LEE JIA QIAN VALERIE - presentation slides, reasoning for data cleaning
 
