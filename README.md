@@ -18,9 +18,10 @@ LEE JIA QIAN VALERIE - presentation slides, reasoning for data cleaning
 - Advantages of a more precise food delivery time: Builds customer confidence, leading, improved customer experience which eventually leads to increased sales, source from CEO of Fenix Commerce, Akhilesh Srivastava’s linkedin account: https://www.linkedin.com/pulse/what-does-take-provide-estimated-delivery-dates-akhilesh-srivastava/
 
 ## Problem Definition
-- Are we able to predict the food delivery time based on the attributes given in the dataset?
-- Which attributes are of higher importance for the predictions?
-- Which/what models would be the best for predicting the food delivery time?
+- Are we able to create a model that predicts the delivery time? 
+- Which features are of higher importance for the predictions?
+- Are we able to improve the model through feature selection?
+- Which / What models would be best for predicting the food delivery time?
 
 ## Models Used
 - Linear Regression: `sklearn.linear_model.LinearRegression`
@@ -63,15 +64,26 @@ LEE JIA QIAN VALERIE - presentation slides, reasoning for data cleaning
     - Predicting TimeTaken using the models trained
 
 ## Conclusion
+Using XGBoost regressor we are able to predict the delivery time with a R2 of 0.82. 
+
+We performed analysis on the visualisations and observed the following:
   - Features that positively correlate to delivery time:
-    - Age, distance
+    - Age ~ We could not find a reason to explain the correlation
+    - Distance
   - Features that negatively correlate to delivery time:
     - Ratings of driver
   - Delivery peak hours: 
     - Afternoon: 11am to 2pm
     - Evening: 7pm to 9pm
-  - (Can also use this part for explaining why the features positively or negatively correlate to delivery time) Found out certain characteristics of drivers that may result in higher/lower delivery time:
-    - Higher median age (likely to take on multiple delivery each time), higher rating (although median for no multiple delivery is lower than those with 2 deliveries at each time but IQR is smaller -> means more consistent)
+  - Important categorical features: 
+    - Multiple Delivery ~ Multiple Delivery attributed to high delivery time. This shows the concept of supply and demand between riders and delivery orders. 
+    - Road Condition ~ Traffic conditions attributed to higher delivery time.
+
+Models and Feature selection:
+Selection of features based on visualisation indeed improves results of linear regression. However,  this method of feature selection does not improve the results of other models. E.g. RandomForrestRegressor, XGBoost. (Explain how feature selection work for the other regressor)
+(Which model is best for the prediction and why)
+(Recommendation to improve delivery time/ Recommendations to improve model)
+
 
 ## What did We Learn From this Project?
   - Visualisation of missing values using `missingno`
