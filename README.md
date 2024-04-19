@@ -54,17 +54,17 @@ LEE JIA QIAN VALERIE - presentation slides, reasoning for data cleaning
 4. **Exploratory Data Analysis** 
     - Numerical Features and Correlation 
     - Numerical Against Categorical 
-    - Outlier Removal - Z-score
+    - Outlier Removal - Z-score and IQR
     - Categorical count
     - Time-Series
 5. **Machine Learning - Regression**
     - Encoding categorical variables using `LabelEncoder` and `OneHotEncoder` from `sklearn.preprocessor`
     - Standardisation of the values across columns using `sklearn.preprocessor.StandardScaler`
-    - Model fitting on the dataset - trying linear regression, decision tree regression, random forest regression, and XGB regression, with different hyperparameters
-    - Predicting TimeTaken using the models trained
+    - Model fitting on the dataset using `GridSearchCV`, trying out linear regression, decision tree regression, random forest regression, and XGB regression, with different hyperparameters
+    - Predicting TimeTaken using the models trained on the test set
 
 ## Conclusion
-Using XGBoost regressor we are able to predict the delivery time with a R2 of 0.82. 
+Using `XGBRegressor` we are able to predict the delivery time with an R2 score of 0.83. 
 
 We performed analysis on the visualisations and observed the following:
   - Features that positively correlate to delivery time:
@@ -72,16 +72,17 @@ We performed analysis on the visualisations and observed the following:
     - Distance
   - Features that negatively correlate to delivery time:
     - Ratings of driver
-  - Important categorical features: 
+  - Important features for prediction: 
     - Multiple Delivery ~ Multiple Delivery attributed to high delivery time. This shows the concept of supply and demand between riders and delivery orders. 
-    - Road Condition ~ Traffic conditions attributed to higher delivery time
+    - Ratings ~ the time taken for the client to receive their order is significant for their user experiences, and hence affecting their ratings given to the deliverer.
+    - Road Condition ~ Traffic conditions attributed to higher delivery time.
   - Time-Series observations:
     - Delivery time is significantly affectted by multiple devlieries as observed on the time-series graph. Explanation as above ^.
     - Road conditions explanation as above ^
     - Recommendation of improvement to customers, restaurant, and delivery riders.
 
 Models and Feature selection:
-Selection of features based on visualisation indeed improves results of linear regression. However,  this method of feature selection does not improve the results of other models. E.g. RandomForrestRegressor, XGBoost. (Explain how feature selection work for the other regressor)
+Selection of features based on visualisation indeed improved results of linear regression. However,  this method of feature selection does not improve the results of other models. E.g. RandomForrestRegressor, XGBoost. (Explain how feature selection work for the other regressor)
 (Which model is best for the prediction and why)
 (Recommendation to improve delivery time/ Recommendations to improve model)
 
@@ -90,6 +91,8 @@ Selection of features based on visualisation indeed improves results of linear r
   - Visualisation of missing values using `missingno`
   - Imputation of missing values, with machine learning - `MissForest`
   - Standardisation of columns
+  - Encoding of categorical data
+  - Cross-validation on regression models
   - Abovementioned regression methods
 
 ## References
