@@ -8,7 +8,7 @@ SONG YICK QI - Data Cleaning & Preparation, Machine Learning, Readme, Presentati
 
 LIEW WEI JIE - Data Cleaning & Preparation, EDA, Machine Learning, Readme, Presentation
 
-LEE JIA QIAN VALERIE - presentation slides, reasoning for data cleaning
+LEE JIA QIAN VALERIE - Data Preparation,Readme, Presentation
 
 
 ## Motivations
